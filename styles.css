@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+  background: linear-gradient(120deg, #1e1e1e, #3a3a3a);
+  animation: backgroundMove 10s infinite;
+}
+
+@keyframes backgroundMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+#gameCanvas {
+  display: none;
+  margin: auto;
+  width: 90%; /* Reducir al 90% */
+  height: 90%; /* Reducir al 90% */
+  background-color: #111; /* Fondo oscuro para contraste */
+  border: 4px solid #4CAF50; /* Borde claro */
+  box-shadow: 0 0 20px #4CAF50; /* Resaltar el borde */
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.screen.active {
+  display: flex;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(120deg, #4CAF50, #45a049);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.records {
+  margin: 20px 0;
+  max-width: 400px;
+  text-align: left;
+}
+
+#startScreen h1 {
+  font-size: 3rem;
+  color: #4CAF50;
+  text-shadow: 0 0 10px #4CAF50;
+}
+
+.records ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.records li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark {
+  background: linear-gradient(120deg, #000, #444);
+  color: white;
+}
+
+body.light {
+  background: linear-gradient(120deg, #fff, #ccc);
+  color: black;
+}
+
+#statusBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: left;
+  background-color: hsla(122, 39%, 49%, 0);
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1000;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
+}
+
+#statusScore, #statusSpeed {
+  font-weight: bold;
+  margin-right: 20px;
+}

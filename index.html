@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="startScreen" class="screen active">
+    <h1>Snake Game</h1>
+    <div class="records" id="recordList">
+      <h2>Top 10 Records</h2>
+      <ul id="records"></ul>
+    </div>
+    <button id="startButton">Start Game</button>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+  <div id="statusBar">
+    <span id="statusScore">Score: 0</span>
+    <span id="statusSpeed">Speed: Normal</span>
+  </div>  
+  <div id="score" class="screen"></div>
+
+  <script src="snake.js"></script>
+</body>
+</html>
